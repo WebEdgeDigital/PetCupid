@@ -70,23 +70,23 @@
 <div class="container-find-dog">
     <div class="row">
         <div class="col-md-12">
-            <div class="row">
-                <h2>
-                    Find the perfect dog
-                    to match!
-                </h2>
-                <form action="http://www.adoptapet.com/pet-search-process" method="get" name="search_dogs" id="search_dogs">
-                    <input type="hidden" name="show_modal_opt_out">
-                    <input type="hidden" name="clan_name" value="dog">
-                    <input type="hidden" name="clan_id" value="1">
-                    <input type="hidden" name="is_family_specific" value="">
-                    <input type="hidden" name="saver_id">
-                    <div class="col-md-4">
+            <h2>
+                Find the perfect dog
+                to match!
+            </h2>
+            <form action="http://www.adoptapet.com/pet-search-process" method="get" name="search_dogs" id="search_dogs">
+                <input type="hidden" name="show_modal_opt_out">
+                <input type="hidden" name="clan_name" value="dog">
+                <input type="hidden" name="clan_id" value="1">
+                <input type="hidden" name="is_family_specific" value="">
+                <input type="hidden" name="saver_id">
+                <div class="row">
+                    <div class="span3">
                         <label for="city_or_zip_label"><span name="city_or_zip_label" class="">Location</span></label>
                         <input type="text" name="city_or_zip" class="location form-control " size="10" maxlength="25" value="" placeholder="zip/postal or city, state">
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="span3">
                         <label for="family_id_label"><span name="family_id_label">Breed</span></label>
                         <div class="slider" style="">
                             <select name="family_id" class="form-control" style="display: none;">
@@ -687,29 +687,104 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="span3">
+                        <label for="sex"><span>Sex</span></label>
+                        <select name="sex" id="select2" class="form-control">
+                            <option selected="selected" value="">ANY</option>
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                        </select>
+                    </div>
+                    @*<div class="span3">
 
-                        <span class="breed_help" title="Note: Your search will show purebreds &amp; mixes of the breed you select as well as similar pets">
-                            <img src="https://dq25e8j0im0tm.cloudfront.net/images/helpicon-2.png" width="15" height="15" align="bottom">
-                        </span>
+                            <span class="breed_help" title="Note: Your search will show purebreds &amp; mixes of the breed you select as well as similar pets">
+                                <img src="https://dq25e8j0im0tm.cloudfront.net/images/helpicon-2.png" width="15" height="15" align="bottom">
+                            </span>
+                        </div>*@
+                </div>
+
+                <div class="row">
+
+                    <div class="span3">
+                        <label for="geo_range"><span>Distance</span> </label><select name="geo_range" class="form-control">
+                            <option value="35">Less than 35 miles</option>
+                            <option value="50" selected="selected">Less than 50 miles</option>
+                            <option value="75">Less than 75 miles</option>
+                            <option value="100">Less than 100 miles</option>
+                            <option value="250">Less than 250 miles</option>
+                            <option value="3500">Nationwide Search (must select breed)</option>
+                        </select>
                     </div>
 
-                    <div class="col-md-4">
-                        <div class="col-lg-3">
-                            <label for="sex"><span>Sex</span></label>
-                        </div>
-                        <div class="col-lg-2">
-                            <select name="sex" id="select2" class="form-control">
-                                <option selected="selected" value="">ANY</option>
-                                <option value="m">Male</option>
-                                <option value="f">Female</option>
-                            </select>
-                        </div>
+                    <div class="span3">
+                        <label for="age"><span>Age</span></label>
+                        <select name="age" class="form-control">
+                            <option value="">ANY</option>
+                            <option value="young">Young</option>
+                            <option value="adult">Adult</option>
+                            <option value="senior">Senior</option>
+                            <option value="puppy">Puppy </option>
+                        </select>
                     </div>
 
-                    <div class="col-xs-6 col-xs-offset-6 col-md-4 col-md-offset-8 col-lg-3 col-lg-offset-9"><input type="button" name="button" id="submit_dog_search" class="green_button museo_700 search_saver_dialog search_button" value="Search"></div>
-                </form>
-            </div>
+                    <div class="span3">
+                        <label for="color_id"><span>Color</span></label>
+                        <select name="color_id" class="form-control">
+                            <option value="" selected="selected">ANY</option>
+
+                            <option value="152|Black">Black</option>
+
+                            <option value="153|Brindle">Brindle</option>
+
+                            <option value="154|Brown/Chocolate">Brown/Chocolate</option>
+
+                            <option value="155|Gray/Blue/Silver/Salt &amp; Pepper">Gray/Blue/Silver/Salt &amp; Pepper</option>
+
+                            <option value="156|Merle">Merle</option>
+
+                            <option value="157|Red/Golden/Orange/Chestnut">Red/Golden/Orange/Chestnut</option>
+
+                            <option value="158|Silver &amp; Tan (Yorkie colors)">Silver &amp; Tan (Yorkie colors)</option>
+
+                            <option value="159|Tan/Yellow/Fawn">Tan/Yellow/Fawn</option>
+
+                            <option value="160|Tricolor (Tan/Brown &amp; Black &amp; White)">Tricolor (Tan/Brown &amp; Black &amp; White)</option>
+
+                            <option value="161|White">White</option>
+
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="span3">
+                        <label for="pet_size_range_id"><span>Size</span></label>
+                        <select name="pet_size_range_id" class="form-control">
+                            <option value="" selected="selected">ANY</option>
+
+                            <option value="1|Small 25 lbs (11 kg) or less">Small 25 lbs (11 kg) or less</option>
+
+                            <option value="2|Med. 26-60 lbs (12-27 kg)">Med. 26-60 lbs (12-27 kg)</option>
+
+                            <option value="3|Large 61-100 lbs (28-45 kg)">Large 61-100 lbs (28-45 kg)</option>
+
+                            <option value="4|X-Large 101 lbs (46 kg) or more">X-Large 101 lbs (46 kg) or more</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="span3">
+                        <label>
+                            <input type="checkbox" name="special_needs_p" id="special_needs_p" value="1" style="margin-left:0;"> <span class="hidden-xs">Has Special Needs</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                <input type="button" name="button" id="submit_dog_search" class="btn btn-primary" value="Search"></div>
+            </form>
         </div>
     </div>
 </div>
