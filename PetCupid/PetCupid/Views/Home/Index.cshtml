@@ -1,45 +1,718 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-@section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-            <p>
-                To learn more about ASP.NET MVC visit
-                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
-                If you have any questions about ASP.NET MVC visit
-                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
-            </p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">Find a pet partner</a>
+                    </li>
+                    <li>
+                        <a href="#">How it works</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About us<strong class="caret"></strong></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">Our policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Something else here</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="#">Separated link</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="#">One more separated link</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">My dog's account</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">My Account</a>
+                            </li>
+                            <li>
+                                <a href="#">Another action</a>
+                            </li>
+                            <li>
+                                <a href="#">Something else here</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="#">Separated link</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
         </div>
-    </section>
-}
-<h3>We suggest the following:</h3>
-<ol class="round">
-    <li class="one">
-        <h5>Getting Started</h5>
-        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-        enables a clean separation of concerns and that gives you full control over markup
-        for enjoyable, agile development. ASP.NET MVC includes many features that enable
-        fast, TDD-friendly development for creating sophisticated applications that use
-        the latest web standards.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
-    </li>
+        <div class="homepageCarousel" style="background-image: url(/Content/images/Cute2.jpg)"></div>
+    </div>
+</div>
 
-    <li class="two">
-        <h5>Add NuGet packages and jump-start your coding</h5>
-        NuGet makes it easy to install and update free libraries and tools.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
-    </li>
+<div class="container-find-dog">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <h2>
+                    Find the perfect dog
+                    to match!
+                </h2>
+                <form action="http://www.adoptapet.com/pet-search-process" method="get" name="search_dogs" id="search_dogs">
+                    <input type="hidden" name="show_modal_opt_out">
+                    <input type="hidden" name="clan_name" value="dog">
+                    <input type="hidden" name="clan_id" value="1">
+                    <input type="hidden" name="is_family_specific" value="">
+                    <input type="hidden" name="saver_id">
+                    <div class="col-md-4">
+                        <label for="city_or_zip_label"><span name="city_or_zip_label" class="">Location</span></label>
+                        <input type="text" name="city_or_zip" class="location form-control " size="10" maxlength="25" value="" placeholder="zip/postal or city, state">
+                    </div>
 
-    <li class="three">
-        <h5>Find Web Hosting</h5>
-        You can easily find a web hosting company that offers the right mix of features
-        and price for your applications.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
-    </li>
-</ol>
+                    <div class="col-md-4">
+                        <label for="family_id_label"><span name="family_id_label">Breed</span></label>
+                        <div class="slider" style="">
+                            <select name="family_id" class="form-control" style="display: none;">
+                                <option value="" selected="selected">ANY</option>
+
+                                <option value="criteria=1081|&quot;Gentle Giants&quot;">"Gentle Giants"</option>
+
+                                <option value="criteria=1063|&quot;Mutt-Madness Surprise Mix!&quot;">"Mutt-Madness Surprise Mix!"</option>
+
+                                <option value="criteria=1073|&quot;Mini Mutts (Mucho Love!)&quot;">"Mini Mutts (Mucho Love!)"</option>
+
+                                <option value="criteria=1064|&quot;Mid-Sized Mutts&quot;">"Mid-Sized Mutts"</option>
+
+                                <option value="criteria=1077|&quot;Big Mutt-hatten Sky Scrapers&quot;">"Big Mutt-hatten Sky Scrapers"</option>
+
+                                <option value="super=1017|&quot;Barrymore's Buddies&quot;">"Barrymore's Buddies"</option>
+
+                                <option value="nick=1033|&quot;Taco Bell Dog's Little Amigos&quot;">"Taco Bell Dog's Little Amigos"</option>
+
+                                <option value="nick=1048|&quot;Eddie &amp; Frasier's Friends!&quot;">"Eddie &amp; Frasier's Friends!"</option>
+
+                                <option value="real=187|Affenpinscher">Affenpinscher</option>
+
+                                <option value="real=1|Afghan Hound">Afghan Hound</option>
+
+                                <option value="super=1015|Ain't Nothin' but a Hound Dog!">Ain't Nothin' but a Hound Dog!</option>
+
+                                <option value="real=2|Airedale Terrier">Airedale Terrier</option>
+
+                                <option value="real=800|Akbash">Akbash</option>
+
+                                <option value="real=3|Akita">Akita</option>
+
+                                <option value="real=4|Alaskan Malamute">Alaskan Malamute</option>
+
+                                <option value="criteria=1078|&quot;Almost a Horse&quot;">"Almost a Horse"</option>
+
+                                <option value="real=361|American Bulldog">American Bulldog</option>
+
+                                <option value="real=5|American Eskimo Dog">American Eskimo Dog</option>
+
+                                <option value="real=1167|American Hairless Terrier">American Hairless Terrier</option>
+
+                                <option value="real=801|American Pit Bull Terrier">American Pit Bull Terrier</option>
+
+                                <option value="real=1082|American Staffordshire Terrier">American Staffordshire Terrier</option>
+
+                                <option value="nick=1030|American Water Spaniel">American Water Spaniel</option>
+
+                                <option value="real=7|Anatolian Shepherd">Anatolian Shepherd</option>
+
+                                <option value="real=8|Australian Cattle Dog">Australian Cattle Dog</option>
+
+                                <option value="real=9|Australian Kelpie">Australian Kelpie</option>
+
+                                <option value="real=10|Australian Shepherd">Australian Shepherd</option>
+
+                                <option value="real=802|Australian Terrier">Australian Terrier</option>
+
+                                <option value="real=12|Basenji">Basenji</option>
+
+                                <option value="nick=1053|Basset Griffon Vendeen">Basset Griffon Vendeen</option>
+
+                                <option value="real=13|Basset Hound">Basset Hound</option>
+
+                                <option value="real=14|Beagle">Beagle</option>
+
+                                <option value="real=15|Bearded Collie">Bearded Collie</option>
+
+                                <option value="real=803|Beauceron">Beauceron</option>
+
+                                <option value="real=189|Bedlington Terrier">Bedlington Terrier</option>
+
+                                <option value="real=1168|Belgian Laekenois">Belgian Laekenois</option>
+
+                                <option value="real=191|Belgian Malinois">Belgian Malinois</option>
+
+                                <option value="real=16|Belgian Shepherd">Belgian Shepherd</option>
+
+                                <option value="real=192|Belgian Tervuren">Belgian Tervuren</option>
+
+                                <option value="real=17|Bernese Mountain Dog">Bernese Mountain Dog</option>
+
+                                <option value="real=18|Bichon Frise">Bichon Frise</option>
+
+                                <option value="real=804|Black Mouth Cur">Black Mouth Cur</option>
+
+                                <option value="real=19|Black and Tan Coonhound">Black and Tan Coonhound</option>
+
+                                <option value="real=20|Bloodhound">Bloodhound</option>
+
+                                <option value="nick=1027|Blue Heeler">Blue Heeler</option>
+
+                                <option value="real=1368|Blue Lacy/Texas Lacy">Blue Lacy/Texas Lacy</option>
+
+                                <option value="real=193|Bluetick Coonhound">Bluetick Coonhound</option>
+
+                                <option value="nick=1041|Bobtail">Bobtail</option>
+
+                                <option value="real=1165|Bolognese">Bolognese</option>
+
+                                <option value="real=21|Border Collie">Border Collie</option>
+
+                                <option value="real=194|Border Terrier">Border Terrier</option>
+
+                                <option value="real=22|Borzoi">Borzoi</option>
+
+                                <option value="real=23|Boston Terrier">Boston Terrier</option>
+
+                                <option value="real=24|Bouvier des Flandres">Bouvier des Flandres</option>
+
+                                <option value="real=25|Boxer">Boxer</option>
+
+                                <option value="real=601|Boykin Spaniel">Boykin Spaniel</option>
+
+                                <option value="real=26|Briard">Briard</option>
+
+                                <option value="real=27|Brittany">Brittany</option>
+
+                                <option value="real=195|Brussels Griffon">Brussels Griffon</option>
+
+                                <option value="real=28|Bull Terrier">Bull Terrier</option>
+
+                                <option value="nick=1039|Bulldog">Bulldog</option>
+
+                                <option value="real=30|Bullmastiff">Bullmastiff</option>
+
+                                <option value="real=31|Cairn Terrier">Cairn Terrier</option>
+
+                                <option value="real=381|Canaan Dog">Canaan Dog</option>
+
+                                <option value="nick=1194|Canary Dog">Canary Dog</option>
+
+                                <option value="real=461|Cane Corso">Cane Corso</option>
+
+                                <option value="nick=1036|Cardigan Welsh Corgi">Cardigan Welsh Corgi</option>
+
+                                <option value="real=805|Carolina Dog">Carolina Dog</option>
+
+                                <option value="criteria=1074|&quot;Carry-On Size Cuties&quot;">"Carry-On Size Cuties"</option>
+
+                                <option value="real=33|Catahoula Leopard Dog">Catahoula Leopard Dog</option>
+
+                                <option value="nick=1028|Cattle Dog">Cattle Dog</option>
+
+                                <option value="real=34|Cavalier King Charles Spaniel">Cavalier King Charles Spaniel</option>
+
+                                <option value="real=35|Chesapeake Bay Retriever">Chesapeake Bay Retriever</option>
+
+                                <option value="real=36|Chihuahua">Chihuahua</option>
+
+                                <option value="real=37|Chinese Crested">Chinese Crested</option>
+
+                                <option value="real=38|Chow Chow">Chow Chow</option>
+
+                                <option value="real=196|Clumber Spaniel">Clumber Spaniel</option>
+
+                                <option value="real=39|Cockapoo">Cockapoo</option>
+
+                                <option value="real=40|Cocker Spaniel">Cocker Spaniel</option>
+
+                                <option value="real=41|Collie">Collie</option>
+
+                                <option value="real=42|Coonhound">Coonhound</option>
+
+                                <option value="super=1014|Coonhounds (All Types)">Coonhounds (All Types)</option>
+
+                                <option value="real=230|Corgi">Corgi</option>
+
+                                <option value="real=521|Coton de Tulear">Coton de Tulear</option>
+
+                                <option value="real=1169|Curly-Coated Retriever">Curly-Coated Retriever</option>
+
+                                <option value="criteria=1070|&quot;Cute Canine Crosses&quot;">"Cute Canine Crosses"</option>
+
+                                <option value="real=44|Dachshund">Dachshund</option>
+
+                                <option value="real=45|Dalmatian">Dalmatian</option>
+
+                                <option value="real=199|Dandie Dinmont Terrier">Dandie Dinmont Terrier</option>
+
+                                <option value="nick=1060|Deerhound">Deerhound</option>
+
+                                <option value="real=46|Doberman Pinscher">Doberman Pinscher</option>
+
+                                <option value="real=621|Dogo Argentino">Dogo Argentino</option>
+
+                                <option value="real=242|Dogue de Bordeaux">Dogue de Bordeaux</option>
+
+                                <option value="real=47|Dutch Shepherd">Dutch Shepherd</option>
+
+                                <option value="real=1186|English (Redtick) Coonhound">English (Redtick) Coonhound</option>
+
+                                <option value="real=29|English Bulldog">English Bulldog</option>
+
+                                <option value="nick=1052|English Mastiff">English Mastiff</option>
+
+                                <option value="nick=1173|English Pointer">English Pointer</option>
+
+                                <option value="real=49|English Setter">English Setter</option>
+
+                                <option value="nick=1042|English Sheepdog">English Sheepdog</option>
+
+                                <option value="real=641|English Shepherd">English Shepherd</option>
+
+                                <option value="real=51|English Springer Spaniel">English Springer Spaniel</option>
+
+                                <option value="real=52|English Toy Spaniel">English Toy Spaniel</option>
+
+                                <option value="real=808|Entlebucher">Entlebucher</option>
+
+                                <option value="nick=1020|Eskimo Dog">Eskimo Dog</option>
+
+                                <option value="nick=1019|Eskimo Spitz">Eskimo Spitz</option>
+
+                                <option value="criteria=1067|&quot;Fantastic Fidos&quot;">"Fantastic Fidos"</option>
+
+                                <option value="real=310|Feist">Feist</option>
+
+                                <option value="real=201|Field Spaniel">Field Spaniel</option>
+
+                                <option value="real=810|Fila Brasileiro">Fila Brasileiro</option>
+
+                                <option value="real=811|Finnish Lapphund">Finnish Lapphund</option>
+
+                                <option value="real=54|Finnish Spitz">Finnish Spitz</option>
+
+                                <option value="real=202|Flat-Coated Retriever">Flat-Coated Retriever</option>
+
+                                <option value="real=812|Fox Terrier (Smooth)">Fox Terrier (Smooth)</option>
+
+                                <option value="real=813|Fox Terrier (Toy)">Fox Terrier (Toy)</option>
+
+                                <option value="real=55|Fox Terrier (Wirehaired)">Fox Terrier (Wirehaired)</option>
+
+                                <option value="super=1005|Fox Terriers (All Types)">Fox Terriers (All Types)</option>
+
+                                <option value="real=56|Foxhound">Foxhound</option>
+
+                                <option value="real=203|French Bulldog">French Bulldog</option>
+
+                                <option value="nick=1038|French Mastiff">French Mastiff</option>
+
+                                <option value="super=992|&quot;Funny-Faced Breeds&quot;">"Funny-Faced Breeds"</option>
+
+                                <option value="real=814|German Pinscher">German Pinscher</option>
+
+                                <option value="real=57|German Shepherd Dog">German Shepherd Dog</option>
+
+                                <option value="real=58|German Shorthaired Pointer">German Shorthaired Pointer</option>
+
+                                <option value="real=204|German Wirehaired Pointer">German Wirehaired Pointer</option>
+
+                                <option value="nick=1171|Giant Schnauzer">Giant Schnauzer</option>
+
+                                <option value="real=815|Glen of Imaal Terrier">Glen of Imaal Terrier</option>
+
+                                <option value="super=1016|&quot;Go Fetch! Retrievers!&quot;">"Go Fetch! Retrievers!"</option>
+
+                                <option value="real=60|Golden Retriever">Golden Retriever</option>
+
+                                <option value="real=1369|Goldendoodle">Goldendoodle</option>
+
+                                <option value="real=61|Gordon Setter">Gordon Setter</option>
+
+                                <option value="real=62|Great Dane">Great Dane</option>
+
+                                <option value="real=63|Great Pyrenees">Great Pyrenees</option>
+
+                                <option value="real=205|Greater Swiss Mountain Dog">Greater Swiss Mountain Dog</option>
+
+                                <option value="real=64|Greyhound">Greyhound</option>
+
+                                <option value="real=661|Halden Hound (Haldenstrover)">Halden Hound (Haldenstrover)</option>
+
+                                <option value="real=206|Harrier">Harrier</option>
+
+                                <option value="real=501|Havanese">Havanese</option>
+
+                                <option value="super=1006|Hounds (All Types)">Hounds (All Types)</option>
+
+                                <option value="super=1008|Hounds (Scent Hounds)">Hounds (Scent Hounds)</option>
+
+                                <option value="super=1007|Hounds (Sight Hounds)">Hounds (Sight Hounds)</option>
+
+                                <option value="real=816|Hovawart">Hovawart</option>
+
+                                <option value="nick=1195|Hungarian Puli">Hungarian Puli</option>
+
+                                <option value="nick=1196|Hungarian Water Dog">Hungarian Water Dog</option>
+
+                                <option value="real=817|Husky">Husky</option>
+
+                                <option value="real=281|Ibizan Hound">Ibizan Hound</option>
+
+                                <option value="real=67|Irish Setter">Irish Setter</option>
+
+                                <option value="real=207|Irish Terrier">Irish Terrier</option>
+
+                                <option value="real=208|Irish Water Spaniel">Irish Water Spaniel</option>
+
+                                <option value="real=68|Irish Wolfhound">Irish Wolfhound</option>
+
+                                <option value="real=69|Italian Greyhound">Italian Greyhound</option>
+
+                                <option value="real=818|Italian Spinone">Italian Spinone</option>
+
+                                <option value="real=70|Jack Russell Terrier">Jack Russell Terrier</option>
+
+                                <option value="real=71|Japanese Chin">Japanese Chin</option>
+
+                                <option value="real=72|Jindo">Jindo</option>
+
+                                <option value="criteria=1066|&quot;Just Right (Not too big or small)&quot;">"Just Right (Not too big or small)"</option>
+
+                                <option value="real=819|Kai Dog">Kai Dog</option>
+
+                                <option value="real=820|Karelian Bear Dog">Karelian Bear Dog</option>
+
+                                <option value="real=73|Keeshond">Keeshond</option>
+
+                                <option value="real=209|Kerry Blue Terrier">Kerry Blue Terrier</option>
+
+                                <option value="nick=1032|King Charles Spaniel">King Charles Spaniel</option>
+
+                                <option value="real=821|Kishu">Kishu</option>
+
+                                <option value="real=210|Komondor">Komondor</option>
+
+                                <option value="real=74|Kuvasz">Kuvasz</option>
+
+                                <option value="real=822|Kyi Leo">Kyi Leo</option>
+
+                                <option value="real=1170|Labradoodle">Labradoodle</option>
+
+                                <option value="real=823|Labrador Retriever">Labrador Retriever</option>
+
+                                <option value="real=211|Lakeland Terrier">Lakeland Terrier</option>
+
+                                <option value="real=826|Lancashire Heeler">Lancashire Heeler</option>
+
+                                <option value="nick=1034|&quot;Lassie's Friends!&quot;">"Lassie's Friends!"</option>
+
+                                <option value="real=827|Leonberger">Leonberger</option>
+
+                                <option value="real=76|Lhasa Apso">Lhasa Apso</option>
+
+                                <option value="super=991|&quot;Little Fluffy Powder-Puffs of Love&quot;">"Little Fluffy Powder-Puffs of Love"</option>
+
+                                <option value="criteria=1076|&quot;Little Lovers&quot;">"Little Lovers"</option>
+
+                                <option value="real=1187|Löwchen">Löwchen</option>
+
+                                <option value="real=77|Maltese">Maltese</option>
+
+                                <option value="real=78|Manchester Terrier">Manchester Terrier</option>
+
+                                <option value="real=828|Maremma Sheepdog">Maremma Sheepdog</option>
+
+                                <option value="criteria=1065|&quot;Marvelous Mixes&quot;">"Marvelous Mixes"</option>
+
+                                <option value="real=200|Mastiff">Mastiff</option>
+
+                                <option value="super=1001|Mastiffs (All Types)">Mastiffs (All Types)</option>
+
+                                <option value="nick=1061|Mexican Hairless">Mexican Hairless</option>
+
+                                <option value="real=80|Miniature Pinscher">Miniature Pinscher</option>
+
+                                <option value="nick=1054|Miniature Poodle">Miniature Poodle</option>
+
+                                <option value="nick=1058|Miniature Schnauzer">Miniature Schnauzer</option>
+
+                                <option value="real=829|Mountain Cur">Mountain Cur</option>
+
+                                <option value="real=830|Munsterlander">Munsterlander</option>
+
+                                <option value="nick=1026|&quot;Muscle-Bound Momma's Boys (&amp; Girls!)&quot;">"Muscle-Bound Momma's Boys (&amp; Girls!)"</option>
+
+                                <option value="criteria=1075|&quot;Muttchkins&quot;">"Muttchkins"</option>
+
+                                <option value="criteria=1072|&quot;Mutts are Great, Don't Discriminate!&quot;">"Mutts are Great, Don't Discriminate!"</option>
+
+                                <option value="real=83|Neapolitan Mastiff">Neapolitan Mastiff</option>
+
+                                <option value="real=84|Newfoundland">Newfoundland</option>
+
+                                <option value="real=214|Norfolk Terrier">Norfolk Terrier</option>
+
+                                <option value="real=831|Norwegian Buhund">Norwegian Buhund</option>
+
+                                <option value="real=85|Norwegian Elkhound">Norwegian Elkhound</option>
+
+                                <option value="real=215|Norwich Terrier">Norwich Terrier</option>
+
+                                <option value="real=832|Nova Scotia Duck-Tolling Retriever">Nova Scotia Duck-Tolling Retriever</option>
+
+                                <option value="real=302|Old English Sheepdog">Old English Sheepdog</option>
+
+                                <option value="real=87|Otterhound">Otterhound</option>
+
+                                <option value="real=88|Papillon">Papillon</option>
+
+                                <option value="nick=1172|Parson Russell Terrier">Parson Russell Terrier</option>
+
+                                <option value="real=833|Patterdale Terrier (Fell Terrier)">Patterdale Terrier (Fell Terrier)</option>
+
+                                <option value="real=89|Pekingese">Pekingese</option>
+
+                                <option value="nick=1035|Pembroke Welsh Corgi">Pembroke Welsh Corgi</option>
+
+                                <option value="real=216|Petit Basset Griffon Vendeen">Petit Basset Griffon Vendeen</option>
+
+                                <option value="real=90|Pharaoh Hound">Pharaoh Hound</option>
+
+                                <option value="nick=1021|Pit Bull Terrier">Pit Bull Terrier</option>
+
+                                <option value="real=581|Plott Hound">Plott Hound</option>
+
+                                <option value="real=834|Podengo Portugueso">Podengo Portugueso</option>
+
+                                <option value="real=92|Pointer">Pointer</option>
+
+                                <option value="real=1166|Polish Lowland Sheepdog">Polish Lowland Sheepdog</option>
+
+                                <option value="real=93|Pomeranian">Pomeranian</option>
+
+                                <option value="criteria=1069|&quot;Poochy Pals&quot;">"Poochy Pals"</option>
+
+                                <option value="real=213|Poodle (Miniature)">Poodle (Miniature)</option>
+
+                                <option value="real=94|Poodle (Standard)">Poodle (Standard)</option>
+
+                                <option value="real=226|Poodle (Toy or Tea Cup)">Poodle (Toy or Tea Cup)</option>
+
+                                <option value="super=1010|Poodles (All Types)">Poodles (All Types)</option>
+
+                                <option value="real=95|Portuguese Water Dog">Portuguese Water Dog</option>
+
+                                <option value="real=1188|Presa Canario">Presa Canario</option>
+
+                                <option value="real=96|Pug">Pug</option>
+
+                                <option value="real=1189|Puli">Puli</option>
+
+                                <option value="real=835|Pumi">Pumi</option>
+
+                                <option value="criteria=1068|&quot;Pup-pourri&quot;">"Pup-pourri"</option>
+
+                                <option value="real=218|Rat Terrier">Rat Terrier</option>
+
+                                <option value="real=664|Redbone Coonhound">Redbone Coonhound</option>
+
+                                <option value="nick=1193|Redtick Coonhound">Redtick Coonhound</option>
+
+                                <option value="super=1011|Retrievers (All Types)">Retrievers (All Types)</option>
+
+                                <option value="real=98|Rhodesian Ridgeback">Rhodesian Ridgeback</option>
+
+                                <option value="real=99|Rottweiler">Rottweiler</option>
+
+                                <option value="nick=1029|Russian Wolfhound">Russian Wolfhound</option>
+
+                                <option value="real=101|Saluki">Saluki</option>
+
+                                <option value="real=102|Samoyed">Samoyed</option>
+
+                                <option value="real=662|Schiller Hound">Schiller Hound</option>
+
+                                <option value="real=103|Schipperke">Schipperke</option>
+
+                                <option value="real=836|Schnauzer (Giant)">Schnauzer (Giant)</option>
+
+                                <option value="real=837|Schnauzer (Miniature)">Schnauzer (Miniature)</option>
+
+                                <option value="real=104|Schnauzer (Standard)">Schnauzer (Standard)</option>
+
+                                <option value="super=1013|Schnauzers (All Types)">Schnauzers (All Types)</option>
+
+                                <option value="real=105|Scottie, Scottish Terrier">Scottie, Scottish Terrier</option>
+
+                                <option value="real=219|Scottish Deerhound">Scottish Deerhound</option>
+
+                                <option value="real=220|Sealyham Terrier">Sealyham Terrier</option>
+
+                                <option value="super=1012|Setters (All Types)">Setters (All Types)</option>
+
+                                <option value="real=107|Shar Pei">Shar Pei</option>
+
+                                <option value="super=994|Sheep &amp; Herding Dogs">Sheep &amp; Herding Dogs</option>
+
+                                <option value="real=108|Sheltie, Shetland Sheepdog">Sheltie, Shetland Sheepdog</option>
+
+                                <option value="super=1002|Shepherds (All Types)">Shepherds (All Types)</option>
+
+                                <option value="real=110|Shiba Inu">Shiba Inu</option>
+
+                                <option value="real=111|Shih Tzu">Shih Tzu</option>
+
+                                <option value="nick=1084|Siberian Husky">Siberian Husky</option>
+
+                                <option value="real=113|Silky Terrier">Silky Terrier</option>
+
+                                <option value="real=221|Skye Terrier">Skye Terrier</option>
+
+                                <option value="real=841|Sloughi">Sloughi</option>
+
+                                <option value="nick=1044|Smooth Fox Terrier">Smooth Fox Terrier</option>
+
+                                <option value="super=993|Snow Dogs (Husky/Fluffy Types)">Snow Dogs (Husky/Fluffy Types)</option>
+
+                                <option value="super=998|Spaniels (All Types)">Spaniels (All Types)</option>
+
+                                <option value="super=1000|Spaniels (Medium)">Spaniels (Medium)</option>
+
+                                <option value="super=999|Spaniels (Small)">Spaniels (Small)</option>
+
+                                <option value="super=995|Spitz Types (Large)">Spitz Types (Large)</option>
+
+                                <option value="super=996|Spitz Types (Medium)">Spitz Types (Medium)</option>
+
+                                <option value="super=997|Spitz Types (Small)">Spitz Types (Small)</option>
+
+                                <option value="nick=1043|Springer Spaniel">Springer Spaniel</option>
+
+                                <option value="real=100|St. Bernard">St. Bernard</option>
+
+                                <option value="nick=1022|Staffordshire Bull Terrier">Staffordshire Bull Terrier</option>
+
+                                <option value="nick=1055|Standard Poodle">Standard Poodle</option>
+
+                                <option value="nick=1059|Standard Schnauzer">Standard Schnauzer</option>
+
+                                <option value="nick=1024|&quot;Strong but Sweet&quot;">"Strong but Sweet"</option>
+
+                                <option value="criteria=1080|&quot;Super-Sized Sweeties&quot;">"Super-Sized Sweeties"</option>
+
+                                <option value="real=222|Sussex Spaniel">Sussex Spaniel</option>
+
+                                <option value="real=846|Swedish Vallhund">Swedish Vallhund</option>
+
+                                <option value="nick=1057|Tea Cup Poodle">Tea Cup Poodle</option>
+
+                                <option value="super=1004|Terriers (Medium)">Terriers (Medium)</option>
+
+                                <option value="super=1003|Terriers (Small)">Terriers (Small)</option>
+
+                                <option value="real=561|Thai Ridgeback">Thai Ridgeback</option>
+
+                                <option value="real=224|Tibetan Mastiff">Tibetan Mastiff</option>
+
+                                <option value="real=225|Tibetan Spaniel">Tibetan Spaniel</option>
+
+                                <option value="real=118|Tibetan Terrier">Tibetan Terrier</option>
+
+                                <option value="criteria=1079|&quot;Tons of Love&quot;">"Tons of Love"</option>
+
+                                <option value="real=848|Tosa Inu">Tosa Inu</option>
+
+                                <option value="nick=1031|&quot;Toto's Little pals from Oz!&quot;">"Toto's Little pals from Oz!"</option>
+
+                                <option value="nick=1025|&quot;Tough &amp; Tender&quot;">"Tough &amp; Tender"</option>
+
+                                <option value="nick=1046|Toy Fox Terrier">Toy Fox Terrier</option>
+
+                                <option value="nick=1056|Toy Poodle">Toy Poodle</option>
+
+                                <option value="real=119|Treeing Walker Coonhound">Treeing Walker Coonhound</option>
+
+                                <option value="real=120|Vizsla">Vizsla</option>
+
+                                <option value="real=121|Weimaraner">Weimaraner</option>
+
+                                <option value="nick=1037|Welsh Corgi">Welsh Corgi</option>
+
+                                <option value="real=849|Welsh Springer Spaniel">Welsh Springer Spaniel</option>
+
+                                <option value="real=227|Welsh Terrier">Welsh Terrier</option>
+
+                                <option value="real=123|Westie, West Highland White Terrier">Westie, West Highland White Terrier</option>
+
+                                <option value="real=124|Wheaten Terrier">Wheaten Terrier</option>
+
+                                <option value="real=125|Whippet">Whippet</option>
+
+                                <option value="nick=1045|Wirehaired Fox Terrier">Wirehaired Fox Terrier</option>
+
+                                <option value="real=127|Wirehaired Pointing Griffon">Wirehaired Pointing Griffon</option>
+
+                                <option value="real=212|Xoloitzcuintle/Mexican Hairless">Xoloitzcuintle/Mexican Hairless</option>
+
+                                <option value="real=244|Yorkie, Yorkshire Terrier">Yorkie, Yorkshire Terrier</option>
+
+                                <option value="criteria=1071|&quot;31 Flavors Mixes&quot;">"31 Flavors Mixes"</option>
+
+                            </select><input class="ui-autocomplete-input ui-widget" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <span class="breed_help" title="Note: Your search will show purebreds &amp; mixes of the breed you select as well as similar pets">
+                            <img src="https://dq25e8j0im0tm.cloudfront.net/images/helpicon-2.png" width="15" height="15" align="bottom">
+                        </span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="col-lg-3">
+                            <label for="sex"><span>Sex</span></label>
+                        </div>
+                        <div class="col-lg-2">
+                            <select name="sex" id="select2" class="form-control">
+                                <option selected="selected" value="">ANY</option>
+                                <option value="m">Male</option>
+                                <option value="f">Female</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 col-xs-offset-6 col-md-4 col-md-offset-8 col-lg-3 col-lg-offset-9"><input type="button" name="button" id="submit_dog_search" class="green_button museo_700 search_saver_dialog search_button" value="Search"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

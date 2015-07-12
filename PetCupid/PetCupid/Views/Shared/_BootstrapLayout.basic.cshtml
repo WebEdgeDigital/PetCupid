@@ -1,0 +1,38 @@
+﻿@using System.Web.Optimization
+@using BootstrapSupport
+@using NavigationRoutes
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="@Styles.Url("~/content/css")" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+
+
+    @RenderSection("head", required: false)
+    @Html.Partial("_html5shiv")
+    @* favicons and touch icons go here *@
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+        </div>
+    </header>
+
+    <div class="container">
+        @Html.Partial("_alerts")
+        @Html.Partial("_validationSummary")
+        @RenderBody()
+        <hr>
+        <footer>
+            <p>&copy; Company @System.DateTime.Now.ToString("yyyy")</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/js")
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+</html>
