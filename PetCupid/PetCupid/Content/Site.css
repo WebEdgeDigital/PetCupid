@@ -15,7 +15,7 @@ body {
 }
 
 a {
-    color: #333;
+    color: wheat;
     outline: none;
     padding-left: 3px;
     padding-right: 3px;
@@ -24,7 +24,7 @@ a {
 
     a:link, a:visited,
     a:active, a:hover {
-        color: #333;
+        color: wheat;
     }
 
     a:hover {
